@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Authentication</title>
+    <link rel="stylesheet" href="in.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Firebase Authentication</h1>
+
+        <!-- Google Sign-in Button -->
+        <button class="btn-google" onclick="signInWithGoogle()">Sign in with Google</button>
+
+        <!-- Facebook Sign-in Button -->
+        <button class="btn-facebook" onclick="signInWithFacebook()">Sign in with Facebook</button>
+
+        <!-- GitHub Sign-in Button -->
+        <button class="btn-github" onclick="signInWithGitHub()">Sign in with GitHub</button>
+
+        <!-- OTP Sign-in Section -->
+        <div class="otp-section">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" placeholder="Enter your phone number">
+            <button class="btn-otp" onclick="signInWithOTP()">Sign in with OTP</button>
+        </div>
+
+        <!-- Recaptcha container for OTP -->
+        <div id="recaptcha-container"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@github/auth/dist/auth.esm.js"></script>
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script src="in.js"></script>
+</body>
+</html>
